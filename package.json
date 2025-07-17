@@ -1,0 +1,28 @@
+{
+  "name": "unit_4_lesson_8_movie_revew_app",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000m\u0000o\u0000v\u0000i\u0000e\u0000-\u0000r\u0000e\u0000v\u0000i\u0000e\u0000w\u0000-\u0000a\u0000p\u0000p\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RachelKennedy09/movie-review-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RachelKennedy09/movie-review-app/issues"
+  },
+  "homepage": "https://github.com/RachelKennedy09/movie-review-app#readme",
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
