@@ -7,6 +7,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import movieRoutes from "./routes/movieRoutes.js";
 
 //configure environment variables
 dotenv.config();
@@ -16,6 +17,8 @@ const app = express();
 
 //Middleware to parse JSON
 app.use(express.json());
+
+app.use("/api/movies", movieRoutes);
 
 //Server static files (HTML, CSS, JS) from public folder
 app.use(express.static("public"));
