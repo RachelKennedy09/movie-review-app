@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 id="movie-title">Movie Title</h1>
+    <p id="movie-description">Description</p>
+    <p><strong>Genre:</strong><span id="movie-genre"></span></p>
+    <p><strong>Release Year:</strong><span id="movie-year"></span></p>
+
+    <hr>
+
+    <h2>Reviews</h2>
+    <div id="review-list">
+        <!-- reviews will go here -->
+    </div>
+
+    <hr>
+
+    <h2>Add Review</h2>
+    <form id-="review-form">
+        <input type="text" id="author" placeholder="Your name" required /><br><br>
+        <textarea id="text" placeholder="Your review" required></textarea><br><br>
+        <button type="submit">Submit Review</button>
+    </form>
+
+
+    <script src="movie.js"></script>
+</body>
+
+</html>
