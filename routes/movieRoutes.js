@@ -15,6 +15,7 @@ router.get("/:id", async (req, res) => {
     if (!movie) return res.status(404).json({ error: "Movie not found" });
     res.json(movie);
   } catch (err) {
+    console.error(err); // Log error for debugging
     res.status(500).json({ error: "Server error" });
   }
 });
