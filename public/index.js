@@ -25,3 +25,32 @@ async function loadMovies() {
 }
 
 loadMovies();
+
+// Handle movie form submission
+document.getElementById("movie-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const title = document.getElementById("title").value;
+  const description = document.getElementById("description").value;
+  const genre = document.getElementById("genre").value;
+  const releaseYear = document.getElementById("releaseYear").value;
+
+  try {
+    const res = await fetch("/api/movies", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ title, description, genre, releaseYear }),
+    });
+
+    if (!res.ok) throw new Error("Movie creation failed");
+
+    // Reset form
+    document.getElementById("movie-form").reset();
+
+    // Refresh movie list
+    loadMovies();
+  } catch (err) {
+    console.error("Error adding movie:", err);
+    alert("Failed to add movie. Please try again.");
+  }
+});
